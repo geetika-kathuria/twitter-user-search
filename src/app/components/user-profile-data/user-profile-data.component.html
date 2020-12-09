@@ -1,13 +1,13 @@
 <div class="card">
   <div class="card-header">
     <span class="badge badge-primary mr-3">
-      {{ twitterProfile.followers_count }} Followers
+      {{ twitterProfile.followers_count  | shortNumber}} Followers
     </span>
     <span class="badge badge-success mr-3">
-      {{ twitterProfile.friends_count }} Following
+      {{ twitterProfile.friends_count  | shortNumber }} Following
     </span>
     <span class="badge badge-warning mr-3">
-      {{ twitterProfile.statuses_count }} Tweets
+      {{ twitterProfile.statuses_count  | shortNumber}} Tweets
     </span>
   
   </div>

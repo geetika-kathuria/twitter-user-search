@@ -15,7 +15,6 @@ export class TwitterService {
   constructor(private httpClient: HttpClient) { }
 
   getUsers(searchQuery): Observable<any[]> {
-    console.log(searchQuery);
     this.apiUrl = environment.baseUrl + 'users/' + searchQuery;
     return this.httpClient.get<any>(this.apiUrl).pipe(
      retry(1),
@@ -24,7 +23,6 @@ export class TwitterService {
   }
 
   getUserTweets(screenName): Observable<any[]> {
-    console.log(screenName);
     this.apiUrl = environment.baseUrl + 'tweets/' + screenName;
     return this.httpClient.get<any>(this.apiUrl).pipe(
      retry(1),
@@ -33,7 +31,6 @@ export class TwitterService {
   }
 
   getUser(screenName): Observable<any[]> {
-    console.log(screenName);
     this.apiUrl = environment.baseUrl + 'user/' + screenName;
     return this.httpClient.get<any>(this.apiUrl).pipe(
      retry(1),

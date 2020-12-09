@@ -22,10 +22,9 @@ export class UserProfileComponent implements OnInit {
   }
 
   getUser(): void {
-    this.twitterService.getUsers(this.user).subscribe(
+    this.twitterService.getUser(this.user).subscribe(
       data => {
         this.twitterProfile = data;
-        console.log(this.twitterProfile);
       },
       error => {
         this.twitterProfile = error;
@@ -37,7 +36,6 @@ export class UserProfileComponent implements OnInit {
     this.twitterService.getUserTweets(this.user).subscribe(
       data => {
         this.userTweets = data;
-        console.log(this.userTweets);
       },
       error => {
         this.userTweets = error;

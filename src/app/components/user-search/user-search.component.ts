@@ -22,7 +22,6 @@ export class UserSearchComponent implements OnInit {
     this.twitterService.getUsers(this.searchQuery).subscribe(
       data => {
         this.usersList = data;
-        console.log(this.usersList);
       },
       error => {
         this.errorMessage = error;

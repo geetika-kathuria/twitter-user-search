@@ -13,6 +13,7 @@ import { UserProfileDataComponent } from './components/user-profile-data/user-pr
 import { UserTweetsComponent } from './components/user-tweets/user-tweets.component';
 import { UserSearchComponent } from './components/user-search/user-search.component';
 import { UsersListComponent } from './components/users-list/users-list.component';
+import { ShortNumberPipe } from './utils/short-number.pipe';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { UsersListComponent } from './components/users-list/users-list.component
     UserProfileDataComponent,
     UserTweetsComponent,
     UserSearchComponent,
-    UsersListComponent
+    UsersListComponent,
+    ShortNumberPipe
   ],
   imports: [
     BrowserModule,

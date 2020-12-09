@@ -1,8 +1,9 @@
 <div class="card">
-  <img [src]="twitterProfile.profile_image_url_https" alt="" class="img-fluid" height="200">
   <div class="card-body">
-    <h3 class="card-title">{{twitterProfile.name}}</h3>
+    <h3 class="card-title">{{twitterProfile.name}}
+      <i class="fa fa-check" aria-hidden="true" *ngIf=twitterProfile.verified></i></h3> 
+    <img [src]="twitterProfile.profile_image_url_https" alt="" class="rounded-circle" height="auto"> 
     <p class="card-text">{{twitterProfile.description}}</p>
-    <a [href]="twitterProfile.profile_url" target="_blank" class="btn btn-success btn-sm">User Profile</a>
+    <a [attr.href]="'https://twitter.com/' + twitterProfile.screen_name" target="_blank" class="btn btn-primary btn-sm">Twitter Profile</a>
   </div>
 </div>
