@@ -1,1 +1,8 @@
-<p>user-profile-card works!</p>
+<div class="card">
+  <img [src]="twitterProfile.profile_image_url_https" alt="" class="img-fluid" height="200">
+  <div class="card-body">
+    <h3 class="card-title">{{twitterProfile.name}}</h3>
+    <p class="card-text">{{twitterProfile.description}}</p>
+    <a [href]="twitterProfile.profile_url" target="_blank" class="btn btn-success btn-sm">User Profile</a>
+  </div>
+</div>

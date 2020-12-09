@@ -1,1 +1,27 @@
-<p>user-profile-data works!</p>
+<div class="card">
+  <div class="card-header">
+    <span class="badge badge-primary mr-3">
+      {{ twitterProfile.followers_count }} Followers
+    </span>
+    <span class="badge badge-success mr-3">
+      {{ twitterProfile.friends_count }} Following
+    </span>
+    <span class="badge badge-warning mr-3">
+      {{ twitterProfile.statuses_count }} Tweets
+    </span>
+  
+  </div>
+  <div class="card-body">
+    <ul class="list-group">
+      <li class="list-group-item">
+        User Name: <span class="font-weight-bold">{{twitterProfile.name}}</span>
+      </li>
+      <li class="list-group-item">
+        Location: <span>{{twitterProfile.location}}</span>
+      </li>
+      <li class="list-group-item">
+        Member Since: <span>{{twitterProfile.created_at | date}}</span>
+      </li>
+    </ul>
+  </div>
+</div>

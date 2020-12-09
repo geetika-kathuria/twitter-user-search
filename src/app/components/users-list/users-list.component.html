@@ -1,0 +1,21 @@
+<div *ngIf="usersList" class="card">
+  <div class="card-header">
+    <h4>Users found</h4>
+  </div>
+  <div class="card-body">
+    <ul class="list-group">
+      <li *ngFor="let user of usersList" class="list-group-item list-group-item-action flex-column align-items-start" routerLink="/user/{{ user.screen_name }}">
+        <div class="d-flex w-100 justify-content-between">
+          <span><img [src]="user.profile_image_url_https" alt="" class="rounded-circle">
+            {{user.name}}</span>
+          <a class="text-primary font-weight-bold" routerLink="/user/{{ user.screen_name }}">{{user.screen_name}}
+          </a>
+          <span class="badge badge-primary mr-3">
+            {{ user.followers_count }} Followers
+          </span>
+          <span class="badge badge success"> {{ user.location }} </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  baseUrl: '',
+  baseUrl: 'https://idz70rtyu7.execute-api.us-east-1.amazonaws.com/dev/',
 };
 
 /*
@@ -15,3 +15,6 @@ export const environment = {
  * on performance if an error is thrown.
  */
 // import 'zone.js/dist/zone-error';  // Included with Angular CLI.
+// GET - https://idz70rtyu7.execute-api.us-east-1.amazonaws.com/dev/tweets
+// GET - https://idz70rtyu7.execute-api.us-east-1.amazonaws.com/dev/users
+// GET - https://idz70rtyu7.execute-api.us-east-1.amazonaws.com/dev/user

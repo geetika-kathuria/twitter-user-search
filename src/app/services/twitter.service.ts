@@ -14,20 +14,32 @@ export class TwitterService {
   twitterFeed: Observable<TwitterUserProfile[]>;
   constructor(private httpClient: HttpClient) { }
 
-  getTwitterUsers(searchQuery): Observable<TwitterUserProfile[]> {
-    this.apiUrl = environment.baseUrl;
-    this.twitterFeed = this.httpClient.get<TwitterUserProfile[]>(this.apiUrl).pipe(
-      retry(1),
-      map((twitterFeed: TwitterUserProfile[]) =>
-        twitterFeed.map(feed => new TwitterUserProfile(feed))
-      ),
-      catchError(
-        this.handleErrors
-      )
-    );
-    return this.twitterFeed;
+  getUsers(searchQuery): Observable<any[]> {
+    console.log(searchQuery);
+    this.apiUrl = environment.baseUrl + 'users/' + searchQuery;
+    return this.httpClient.get<any>(this.apiUrl).pipe(
+     retry(1),
+     catchError(this.handleErrors)
+   );
   }
 
+  getUserTweets(screenName): Observable<any[]> {
+    console.log(screenName);
+    this.apiUrl = environment.baseUrl + 'tweets/' + screenName;
+    return this.httpClient.get<any>(this.apiUrl).pipe(
+     retry(1),
+     catchError(this.handleErrors)
+   );
+  }
+
+  getUser(screenName): Observable<any[]> {
+    console.log(screenName);
+    this.apiUrl = environment.baseUrl + 'user/' + screenName;
+    return this.httpClient.get<any>(this.apiUrl).pipe(
+     retry(1),
+     catchError(this.handleErrors)
+   );
+  }
   handleErrors(error: HttpErrorResponse): Observable<any>{
     let errorMessage: string;
     if (error.error instanceof ErrorEvent){

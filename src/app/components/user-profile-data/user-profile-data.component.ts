@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-user-profile-data',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-profile-data.component.scss']
 })
 export class UserProfileDataComponent implements OnInit {
+
+  @Input() twitterProfile: any;
 
   constructor() { }
 

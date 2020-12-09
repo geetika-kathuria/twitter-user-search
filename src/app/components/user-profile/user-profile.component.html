@@ -1,1 +1,15 @@
-<p>user-profile works!</p>
+<div *ngIf="twitterProfile" class="container-fluid mt-3">
+  <div class="row">
+    <div class="col-md-3">
+      <app-user-profile-card [twitterProfile]="twitterProfile"></app-user-profile-card>
+    </div>
+    <div class="col-md-9">
+      <app-user-profile-data [twitterProfile]="twitterProfile"></app-user-profile-data>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <app-user-tweets [userTweets]="userTweets"></app-user-tweets>
+    </div>
+  </div>
+</div>

@@ -12,6 +12,7 @@ import { UserProfileCardComponent } from './components/user-profile-card/user-pr
 import { UserProfileDataComponent } from './components/user-profile-data/user-profile-data.component';
 import { UserTweetsComponent } from './components/user-tweets/user-tweets.component';
 import { UserSearchComponent } from './components/user-search/user-search.component';
+import { UsersListComponent } from './components/users-list/users-list.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { UserSearchComponent } from './components/user-search/user-search.compon
     UserProfileCardComponent,
     UserProfileDataComponent,
     UserTweetsComponent,
-    UserSearchComponent
+    UserSearchComponent,
+    UsersListComponent
   ],
   imports: [
     BrowserModule,
